@@ -1,0 +1,53 @@
+.header {
+  text-align: center;
+}
+.input {
+  text-align: center;
+  font-size: 30px;
+}
+input{
+  width: 40%;
+  height: 30%;
+  padding: 10px;
+  margin: 5px;
+}
+.btn{
+padding: 15px;
+margin: 15px;
+background-color: rgb(165, 207, 209);
+font-weight: 600;
+text-transform: uppercase;
+}
+
+.list{
+  text-align: center;
+
+  font-size: 20px;
+  padding: 20px;
+}
+button {
+  padding: 15px;
+  margin:20px  50px;
+background-color: rgb(165, 207, 209);
+font-weight: 600;
+text-transform: uppercase;
+}
+li {
+  list-style-type: none;
+  font-size: 25px;
+  padding: 10px;
+  margin-left: 10px;
+}
+.delete {
+font-size: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+ .icon
+ {
+margin-left: 50px;
+background-color: rgb(165, 207, 209);
+border-radius: 50%;
+padding: 10px;
+}
