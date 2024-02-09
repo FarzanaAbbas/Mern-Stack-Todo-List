@@ -1,6 +1,5 @@
 const express = require('express')
 const { createToDo, updateToDo, deleteToDo, getAllToDo } = require('../controllers/todoCtrl')
-
 const router = express.Router()
 
 //get-> read
@@ -8,13 +7,10 @@ const router = express.Router()
 //put-> update
 //delete-> delete
 
-
 //https://localhost:3000/getall'
-router.get('/getall',getAllToDo)
-router.post('/',createToDo)
-router.put('/updateToDo',updateToDo)
-router.delete('/deleteToDo/:id',deleteToDo)
-
+router.get('/getall', getAllToDo)
+router.post('/', createToDo)
+router.put('/updateToDo', updateToDo)
+router.delete('/deleteToDo/:id', deleteToDo)
 
 module.exports = router
-
