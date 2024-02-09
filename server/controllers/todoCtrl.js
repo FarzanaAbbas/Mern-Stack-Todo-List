@@ -1,6 +1,9 @@
 const todo = require("../models/todo")
 
 const createToDo = async (req, res) => {
+    if(req.body.message === ''){
+        return res.status(401).json({errorMessage:'Message cannot be empty'})
+    }
     try {
         const addToDo = await todo.create({ message: req.body.message })
         res.status(200).json({ success: 'created', data: addToDo })

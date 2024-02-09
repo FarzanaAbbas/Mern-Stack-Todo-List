@@ -9,7 +9,6 @@ const TodoList = () => {
   const getAllTodos = async () => {
     try {
       const response = await axios.get('http://localhost:3000/todolist/getall') //post(create)
-      console.log(response.data.data)
       setTodoo(response.data.data)
     } catch (error) {
       console.log(error)
@@ -22,7 +21,6 @@ const TodoList = () => {
   const handleDelete = async (id) => {
     try {
       const result = await axios.delete(`http://localhost:3000/todolist/deleteToDo/${id}`) //delete
-      console.log(result.data.success)
       if (result.data.success === 'deleted') {
         toast('deleted')
         getAllTodos()
