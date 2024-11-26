@@ -1,10 +1,12 @@
+require('dotenv').config();
 const express = require('express')
 const RunServer = require('./Database/Connection')
 const cors = require('cors')
 const todoRouter = require('./routes/todoRoute')
 
 const app = express()
-const port = 3000;
+const port = process.env.PORT || 3000;
+
 
 // json : javascript object notation
 // used to transfer the data
