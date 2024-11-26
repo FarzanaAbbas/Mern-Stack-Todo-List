@@ -1,15 +1,20 @@
-const express = require('express') //require is a function.
+const express = require('express')
 const RunServer = require('./Database/Connection')
-const TodoRoutes = require('./routes/todoRoute')
 const cors = require('cors')
-const app = express()
+const todoRouter = require('./routes/todoRoute')
 
-app.use(cors())        //backend port =3000 and front end port = 5173
-app.use(express.json()) //working with json 
-//https://localhost:3000/todolist
-app.use('/todolist', TodoRoutes) // use is a middleware, TodoRoutes is a filename.
+const app = express()
+const port = 3000;
+
+// json : javascript object notation
+// used to transfer the data
+app.use(express.json())
+app.use(cors())
 
 RunServer()
-app.listen(3000, () => {
-    console.log('server is up')
+
+app.use('/todolist',todoRouter)
+
+app.listen(port,()=> {
+console.log(`server is running on ${port}`)
 })
